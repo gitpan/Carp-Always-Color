@@ -16,4 +16,3 @@ t/004-eval.t
 t/005-object.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
-test.pl

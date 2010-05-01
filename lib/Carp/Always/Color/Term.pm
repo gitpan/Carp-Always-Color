@@ -1,6 +1,6 @@
 package Carp::Always::Color::Term;
 BEGIN {
-  $Carp::Always::Color::Term::VERSION = '0.02';
+  $Carp::Always::Color::Term::VERSION = '0.03';
 }
 use Carp::Always;
 
@@ -10,7 +10,7 @@ Carp::Always::Color::Term - Carp::Always, but with terminal color
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
