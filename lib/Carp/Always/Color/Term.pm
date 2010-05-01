@@ -1,6 +1,6 @@
 package Carp::Always::Color::Term;
 BEGIN {
-  $Carp::Always::Color::Term::VERSION = '0.01';
+  $Carp::Always::Color::Term::VERSION = '0.02';
 }
 use Carp::Always;
 
@@ -10,7 +10,7 @@ Carp::Always::Color::Term - Carp::Always, but with terminal color
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -30,20 +30,21 @@ of where STDERR is pointing to.
 BEGIN { $Carp::Internal{(__PACKAGE__)}++ }
 
 sub _die {
+    die @_ if ref($_[0]);
     eval { Carp::Always::_die(@_) };
     my $err = $@;
-    $err =~ s/(.*)/\e[31m$1\e[m/;
+    $err =~ s/(.*)( at .*? line .*?$)/\e[31m$1\e[m$2/m;
     die $err;
 }
 
 sub _warn {
-    my $warning;
+    my @warning;
     {
-        local $SIG{__WARN__} = sub { $warning = $_[0] };
+        local $SIG{__WARN__} = sub { @warning = @_ };
         Carp::Always::_warn(@_);
     }
-    $warning =~ s/(.*)/\e[33m$1\e[m/;
-    warn $warning;
+    $warning[0] =~ s/(.*)( at .*? line .*?$)/\e[33m$1\e[m$2/m;
+    warn @warning;
 }
 
 my %OLD_SIG;

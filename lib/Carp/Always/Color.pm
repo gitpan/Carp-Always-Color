@@ -1,6 +1,6 @@
 package Carp::Always::Color;
 BEGIN {
-  $Carp::Always::Color::VERSION = '0.01';
+  $Carp::Always::Color::VERSION = '0.02';
 }
 BEGIN {
     if (-t *STDERR) {
@@ -17,7 +17,7 @@ Carp::Always::Color - Carp::Always, but with color
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
