@@ -1,31 +1,12 @@
 package Carp::Always::Color::HTML;
 BEGIN {
-  $Carp::Always::Color::HTML::VERSION = '0.03';
+  $Carp::Always::Color::HTML::VERSION = '0.04';
 }
+use strict;
+use warnings;
 use Carp::Always;
+# ABSTRACT: Carp::Always, but with HTML color
 
-=head1 NAME
-
-Carp::Always::Color::HTML - Carp::Always, but with HTML color
-
-=head1 VERSION
-
-version 0.03
-
-=head1 SYNOPSIS
-
-  use Carp::Always::Color::HTML;
-
-or
-
-  perl -MCarp::Always::Color::HTML -e'sub foo { die "foo" } foo()'
-
-=head1 DESCRIPTION
-
-Like L<Carp::Always::Color>, but forces HTML coloring, regardless of where
-STDERR is pointing to.
-
-=cut
 
 BEGIN { $Carp::Internal{(__PACKAGE__)}++ }
 
@@ -58,6 +39,42 @@ END {
     @SIG{qw(__DIE__ __WARN__)} = @OLD_SIG{qw(__DIE__ __WARN__)};
 }
 
+1;
+
+__END__
+=pod
+
+=head1 NAME
+
+Carp::Always::Color::HTML - Carp::Always, but with HTML color
+
+=head1 VERSION
+
+version 0.04
+
+=head1 SYNOPSIS
+
+  use Carp::Always::Color::HTML;
+
+or
+
+  perl -MCarp::Always::Color::HTML -e'sub foo { die "foo" } foo()'
+
+=head1 DESCRIPTION
+
+Like L<Carp::Always::Color>, but forces HTML coloring, regardless of where
+STDERR is pointing to.
+
+=head1 SEE ALSO
+
+=over 4
+
+=item *
+
+L<Carp::Always::Color>
+
+=back
+
 =head1 AUTHOR
 
   Jesse Luehrs <doy at tozt dot net>
@@ -67,8 +84,7 @@ END {
 This software is copyright (c) 2010 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
-the same terms as perl itself.
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 
-1;
