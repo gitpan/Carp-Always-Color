@@ -4,27 +4,29 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Carp::Always, but with color',
-  'AUTHOR' => 'Jesse Luehrs <doy at tozt dot net>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "ABSTRACT" => "Carp::Always, but with color",
+  "AUTHOR" => "Jesse Luehrs <doy at tozt dot net>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => "0.88"
   },
-  'DISTNAME' => 'Carp-Always-Color',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Carp::Always::Color',
-  'PREREQ_PM' => {
-    'Carp::Always' => '0'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'VERSION' => '0.04',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "DISTNAME" => "Carp-Always-Color",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Carp::Always::Color",
+  "PREREQ_PM" => {
+    "Carp::Always" => "0.10"
+  },
+  "VERSION" => "0.05",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

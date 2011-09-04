@@ -1,6 +1,6 @@
 package Carp::Always::Color;
-BEGIN {
-  $Carp::Always::Color::VERSION = '0.04';
+{
+  $Carp::Always::Color::VERSION = '0.05';
 }
 use strict;
 use warnings;
@@ -27,7 +27,7 @@ Carp::Always::Color - Carp::Always, but with color
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -56,13 +56,7 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Carp-Always-Color>.
 
 =head1 SEE ALSO
 
-=over 4
-
-=item *
-
 L<Carp::Always>
-
-=back
 
 =head1 SUPPORT
 
@@ -94,11 +88,11 @@ L<http://search.cpan.org/dist/Carp-Always-Color>
 
 =head1 AUTHOR
 
-  Jesse Luehrs <doy at tozt dot net>
+Jesse Luehrs <doy at tozt dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Jesse Luehrs.
+This software is copyright (c) 2011 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

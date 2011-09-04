@@ -1,6 +1,6 @@
 package Carp::Always::Color::Term;
-BEGIN {
-  $Carp::Always::Color::Term::VERSION = '0.04';
+{
+  $Carp::Always::Color::Term::VERSION = '0.05';
 }
 use strict;
 use warnings;
@@ -50,7 +50,7 @@ Carp::Always::Color::Term - Carp::Always, but with terminal color
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -65,23 +65,13 @@ or
 Like L<Carp::Always::Color>, but forces ANSI terminal code coloring, regardless
 of where STDERR is pointing to.
 
-=head1 SEE ALSO
-
-=over 4
-
-=item *
-
-L<Carp::Always::Color>
-
-=back
-
 =head1 AUTHOR
 
-  Jesse Luehrs <doy at tozt dot net>
+Jesse Luehrs <doy at tozt dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Jesse Luehrs.
+This software is copyright (c) 2011 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
