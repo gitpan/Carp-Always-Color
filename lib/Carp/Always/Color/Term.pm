@@ -1,10 +1,13 @@
 package Carp::Always::Color::Term;
+BEGIN {
+  $Carp::Always::Color::Term::AUTHORITY = 'cpan:DOY';
+}
 {
-  $Carp::Always::Color::Term::VERSION = '0.05';
+  $Carp::Always::Color::Term::VERSION = '0.06';
 }
 use strict;
 use warnings;
-use Carp::Always;
+use Carp::Always 0.10;
 # ABSTRACT: Carp::Always, but with terminal color
 
 
@@ -50,7 +53,7 @@ Carp::Always::Color::Term - Carp::Always, but with terminal color
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -71,7 +74,7 @@ Jesse Luehrs <doy at tozt dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Jesse Luehrs.
+This software is copyright (c) 2012 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

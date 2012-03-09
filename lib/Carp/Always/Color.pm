@@ -1,6 +1,9 @@
 package Carp::Always::Color;
+BEGIN {
+  $Carp::Always::Color::AUTHORITY = 'cpan:DOY';
+}
 {
-  $Carp::Always::Color::VERSION = '0.05';
+  $Carp::Always::Color::VERSION = '0.06';
 }
 use strict;
 use warnings;
@@ -27,7 +30,7 @@ Carp::Always::Color - Carp::Always, but with color
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -92,7 +95,7 @@ Jesse Luehrs <doy at tozt dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Jesse Luehrs.
+This software is copyright (c) 2012 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
