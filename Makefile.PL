@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Carp::Always, but with color",
   "AUTHOR" => "Jesse Luehrs <doy at tozt dot net>",
   "BUILD_REQUIRES" => {
+    "B" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
     "Test::More" => "0.88"
@@ -28,7 +29,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }

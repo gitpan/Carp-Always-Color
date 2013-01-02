@@ -3,7 +3,7 @@ BEGIN {
   $Carp::Always::Color::HTML::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Carp::Always::Color::HTML::VERSION = '0.06';
+  $Carp::Always::Color::HTML::VERSION = '0.07';
 }
 use strict;
 use warnings;
@@ -45,6 +45,7 @@ END {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -53,7 +54,7 @@ Carp::Always::Color::HTML - Carp::Always, but with HTML color
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -74,10 +75,9 @@ Jesse Luehrs <doy at tozt dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Jesse Luehrs.
+This software is copyright (c) 2013 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -3,7 +3,7 @@ BEGIN {
   $Carp::Always::Color::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Carp::Always::Color::VERSION = '0.06';
+  $Carp::Always::Color::VERSION = '0.07';
 }
 use strict;
 use warnings;
@@ -13,15 +13,13 @@ BEGIN {
     if (-t *STDERR) {
         require Carp::Always::Color::Term;
     }
-    else {
-        require Carp::Always::Color::HTML;
-    }
 }
 
 
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -30,7 +28,7 @@ Carp::Always::Color - Carp::Always, but with color
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -46,8 +44,11 @@ Stack traces are hard to read when the messages wrap, because it's hard to tell
 when one message ends and the next message starts. This just colors the first
 line of each stacktrace, based on whether it's a warning or an error. If
 messages are being sent to a terminal, it colors them with terminal escape
-codes, otherwise it colors them with HTML (ideas for more intelligent behavior
-here are welcome).
+codes. If you want to force this behavior, you can use
+L<Carp::Always::Color::Term> instead, which will always add terminal escape
+codes, even when the messages are being sent to something that doesn't look
+like a terminal. L<Carp::Always::Color::HTML> also exists, to add HTML color
+markup to the messages instead of terminal color codes.
 
 =head1 BUGS
 
@@ -95,10 +96,9 @@ Jesse Luehrs <doy at tozt dot net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Jesse Luehrs.
+This software is copyright (c) 2013 by Jesse Luehrs.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
